@@ -1,4 +1,4 @@
 # commander
-simpler commandline broadcast to several processes
+simple multiple MPI GDB commande line multipler
 
-Can be used for anything, I personally find it usefull to ease MPI program debugging with gdb.
+Ease MPI program debugging with gdb.

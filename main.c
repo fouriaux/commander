@@ -2,6 +2,7 @@
 #include <readline/readline.h>
 #include <readline/history.h>
 #include <stdlib.h>
+#include <string.h>
 
 /*
  * Commander: a simple command to send to several processes the same commands
@@ -9,14 +10,12 @@
  *
  */
 
-/* 
- * TODO interupt handler to exit properly
- */
+static int stdinPipes [16];
 
 int main (int argc, char** argv) {
     char* input;
     char prompt [256];
-    int  pids   [256];
+    int  pids   [16];
     for (int i = 1 ; i < argc; i++) {
         strcat (prompt, argv[i]);
         pids[i-1]  = atoi(argv[i]);
